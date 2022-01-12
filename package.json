@@ -1,11 +1,8 @@
 {
   "name": "clear-han-serif-subset",
-  "version": "0.3.0",
+  "version": "1.06.0",
   "description": "Subset of the font Clear Han Serif",
   "main": "README.md",
-  "scripts": {
-    "start": "cat README.md"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/airinghost/clear-han-serif-subset.git"
