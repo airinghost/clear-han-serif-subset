@@ -27,14 +27,14 @@
 
 ```
 /* TTF 格式 */
-/ttf/clearhanserif.original.v1.06.ttf
-/ttf/clearhanserif.subset.v1.06.gb2312.ttf
-/ttf/clearhanserif.subset.v1.06.standard.ttf
+/ttf/clearhanserif.original.v1.07.ttf
+/ttf/clearhanserif.subset.v1.07.gb2312.ttf
+/ttf/clearhanserif.subset.v1.07.standard.ttf
 
 /* WOFF2 格式 */
-/woff2/clearhanserif.subset.v1.06.standard.woff2
-/woff2/clearhanserif.original.v1.06.woff2
-/woff2/clearhanserif.subset.v1.06.gb2312.woff2
+/woff2/clearhanserif.subset.v1.07.standard.woff2
+/woff2/clearhanserif.original.v1.07.woff2
+/woff2/clearhanserif.subset.v1.07.gb2312.woff2
 
 /* 字表 */
 /text/gb2312.txt
@@ -63,7 +63,7 @@
   font-family: Clear Han Serif;
   font-display: swap;
   src:  local(Clear Han Serif),
-        url("/fonts/clearhanserif.subset.v1.06.gb2312.woff2") format("woff2");
+        url("/fonts/clearhanserif.subset.v1.07.gb2312.woff2") format("woff2");
 }
         /* 浏览器会首先检查本地是否已安装该字体，
            若否，则会从网站根目录的 fonts 文件夹中加载 */
@@ -71,20 +71,6 @@
 body {
   font-family: Clear Han Serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif, serif;
 }
-```
-
-另外也可使用 jsDelivr 的 CDN 服务，
-
-即在上述字体文件列表中需要用到的文件前
-
-添加 `https://cdn.jsdelivr.net/npm/clear-han-serif-subset@1.6.0`
-
-然后替换上方示例中的 src 部分，
-即：
-
-```css
-  src:  local(Clear Han Serif),
-        url(https://cdn.jsdelivr.net/npm/clear-han-serif-subset@1.6.0/woff2/clearhanserif.subset.v1.06.gb2312.woff2) format("woff2");
 ```
 
 
