@@ -60,7 +60,7 @@
         url("./woff2/clearhanserif.subset.v1.10.standard.woff2") format("woff2");
 }
         /* 浏览器会首先检查本地是否已安装该字体，
-           若否，则会从网站根目录的 fonts 文件夹中加载 */
+           若无本地资源，则会在线加载 */
 
 body {
   font-family: "Clear Han Serif", system-ui, -apple-system, BlinkMacSystemFont, sans-serif, serif;
