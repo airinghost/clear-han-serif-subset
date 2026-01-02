@@ -15,8 +15,6 @@
 
 - 《通用规范汉字表》（8105字）
 
-- GB2312 中的汉字（6763字）
-
   注：额外添加了“〇”。
 
 
@@ -27,17 +25,14 @@
 
 ```
 /* TTF 格式 */
-/ttf/clearhanserif.original.v1.07.ttf
-/ttf/clearhanserif.subset.v1.07.gb2312.ttf
-/ttf/clearhanserif.subset.v1.07.standard.ttf
+/ttf/clearhanserif.original.v1.10.ttf
+/ttf/clearhanserif.subset.v1.10.standard.ttf
 
 /* WOFF2 格式 */
-/woff2/clearhanserif.subset.v1.07.standard.woff2
-/woff2/clearhanserif.original.v1.07.woff2
-/woff2/clearhanserif.subset.v1.07.gb2312.woff2
+/woff2/clearhanserif.original.v1.10.woff2
+/woff2/clearhanserif.subset.v1.10.standard.woff2
 
 /* 字表 */
-/text/gb2312.txt
 /text/standard.txt
 ```
 
@@ -46,8 +41,6 @@
 - 文件名含 `original` 的是 @chncwk 发布的未子集化的源文件
 
 - 文件名含 `subset` 的是子集化后的文件
-
-- 文件名含 `gb2312` 的字体使用了 GB2312 字库精简
 
 - 文件名含 `standard` 的字体使用了《通用规范汉字表》精简
 
@@ -60,16 +53,17 @@
 
 ```css
 @font-face {
-  font-family: Clear Han Serif;
+  font-family: 'Clear Han Serif';
   font-display: swap;
-  src:  local(Clear Han Serif),
-        url("/fonts/clearhanserif.subset.v1.07.gb2312.woff2") format("woff2");
+  src:  local("Clear Han Serif"),
+        local("屏显臻宋"),
+        url("./woff2/clearhanserif.subset.v1.10.standard.woff2") format("woff2");
 }
         /* 浏览器会首先检查本地是否已安装该字体，
            若否，则会从网站根目录的 fonts 文件夹中加载 */
 
 body {
-  font-family: Clear Han Serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif, serif;
+  font-family: "Clear Han Serif", system-ui, -apple-system, BlinkMacSystemFont, sans-serif, serif;
 }
 ```
 
